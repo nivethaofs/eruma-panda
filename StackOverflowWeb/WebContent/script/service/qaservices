@@ -1,0 +1,14 @@
+angular.module('myapp')
+	.service("qaservices", ['$http', function ($http)
+	{
+			this.getAllQuestionAndSolution = function getAllQuestionAndSolution(qasuccess){
+				var url = "http://localhost:9999/StackOverFlowWeb/rest/solution/getAllSolution";
+				$http.get(url).then(qasuccess, function(success) {
+					console.log("get all user and solution success");
+					},
+					function(error) {
+					return(error);
+					}
+				}
+			}
+	]};
