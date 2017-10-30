@@ -1,0 +1,3 @@
+@Query("FROM Compilation c WHERE c.application.appID = :applicationId")
+Compilation child
+application object of parent
